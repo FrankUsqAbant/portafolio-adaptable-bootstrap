@@ -1,424 +1,235 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <!-- Metadatos -->
-  <meta charset="UTF-8">
-  <meta name="author" content="Frank Abanto">
-  <meta name="description" content="Portafolio de desarrollo web de Frank Abanto">
-  <meta name="keywords" content="HTML, CSS, JavaScript, React, Bootstrap, ">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Titulo -->
-  <title>Frank Abanto | Desarrollo Web Front-End</title>
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="imagenes/icono.png">
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <!-- Iconos de Bootstrap  -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rubik+Dirt&family=Share+Tech+Mono&display=swap"
-    rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frank Abanto — Desarrollador Frontend</title>
+<meta name="description" content="Portfolio de Frank Abanto — Desarrollador Frontend desde Cajamarca, Perú. Especializado en HTML, CSS, JavaScript y React.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0A0A09; --surface: #12110F; --glass: rgba(255,255,255,.025);
+  --glass-border: rgba(255,255,255,.05); --gold: #C6A962; --gold-dark: #A68A3E;
+  --cream: #F0E8DD; --white: #F5F2EE; --text: #D4CFC8; --text-dim: #8A857E; --text-muted: #56514B;
+  --max: 1200px; --r-sm: 12px; --r-md: 20px; --r-lg: 28px
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px;background:var(--bg);scrollbar-width:thin;scrollbar-color:var(--gold) var(--bg)}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px}
+body{font-family:'DM Sans',system-ui,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,9,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--glass-border)}
+.nav-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:60px}
+.nav-logo{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;color:var(--white);text-decoration:none;letter-spacing:3px}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:32px;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;color:var(--text-dim);font-size:.68rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;transition:color .3s}
+.nav-links a:hover{color:var(--white)}
+.menu-toggle{display:none;flex-direction:column;gap:4px;cursor:pointer;background:none;border:none}
+.menu-toggle span{display:block;width:22px;height:2px;background:var(--white);transition:.3s}
+
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:100px 40px 80px;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-200px;right:-100px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(198,169,98,.06) 0%,transparent 70%)}
+.hero-inner{max-width:var(--max);margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:1}
+.hero-text h2{font-size:.62rem;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.hero-text h1{font-family:'Syne',sans-serif;font-size:clamp(3rem,6vw,4.5rem);font-weight:800;line-height:.95;letter-spacing:-1px;color:var(--white);margin-bottom:20px}
+.hero-text h1 em{font-style:normal;background:linear-gradient(135deg,var(--gold),var(--cream));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-text p{font-size:1rem;color:var(--text-dim);max-width:420px;line-height:1.8;margin-bottom:36px}
+.hero-cta{display:inline-flex;gap:14px;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:100px;background:var(--gold);color:#0A0A09;text-decoration:none;font-weight:700;font-size:.82rem;letter-spacing:1px;text-transform:uppercase;transition:all .35s;border:none;cursor:pointer}
+.btn-primary:hover{background:var(--cream);transform:translateY(-2px)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:100px;background:var(--glass);border:1px solid var(--glass-border);color:var(--white);text-decoration:none;font-weight:500;font-size:.78rem;letter-spacing:1px;text-transform:uppercase;transition:all .35s;backdrop-filter:blur(8px)}
+.btn-ghost:hover{border-color:var(--cream);background:rgba(255,255,255,.05)}
+.hero-visual{position:relative}
+.hero-avatar{width:220px;height:220px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#8B7332);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:4rem;font-weight:800;color:var(--white);margin:0 auto;box-shadow:0 20px 60px rgba(198,169,98,.15);position:relative}
+.hero-avatar::after{content:'';position:absolute;inset:-8px;border-radius:50%;border:2px solid rgba(198,169,98,.2)}
+.hero-tech{display:flex;gap:12px;justify-content:center;margin-top:24px;flex-wrap:wrap}
+.hero-tech span{padding:6px 14px;border-radius:100px;background:var(--glass);border:1px solid var(--glass-border);color:var(--text-dim);font-size:.65rem;font-weight:600;letter-spacing:1px;backdrop-filter:blur(4px)}
+
+.section{position:relative;z-index:1;padding:80px 40px}
+.section-inner{max-width:var(--max);margin:0 auto}
+.s-label{display:inline-flex;align-items:center;gap:8px;font-size:.58rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.s-label::before{content:'';width:14px;height:1px;background:var(--gold)}
+.s-title{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;line-height:1.1;color:var(--white);margin-bottom:12px}
+.s-desc{font-size:.9rem;color:var(--text-dim);max-width:500px;line-height:1.7;margin-bottom:40px}
+
+.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.skill-card{padding:28px 20px;border-radius:var(--r-sm);background:var(--glass);border:1px solid var(--glass-border);backdrop-filter:blur(8px);text-align:center;transition:transform .3s}
+.skill-card:hover{transform:translateY(-4px)}
+.skill-icon{font-size:2rem;margin-bottom:12px}
+.skill-card h3{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;color:var(--white);margin-bottom:6px}
+.skill-card p{font-size:.75rem;color:var(--text-dim);line-height:1.5}
+
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.project-card{position:relative;border-radius:var(--r-md);overflow:hidden;background:var(--glass);border:1px solid var(--glass-border);backdrop-filter:blur(8px);transition:transform .4s}
+.project-card:hover{transform:translateY(-6px);border-color:rgba(198,169,98,.25)}
+.project-img{aspect-ratio:16/10;background:linear-gradient(135deg,var(--surface),#1a1510);display:flex;align-items:center;justify-content:center;font-size:3rem;position:relative;overflow:hidden}
+.project-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(10,10,9,.6) 100%)}
+.project-info{padding:20px}
+.project-info h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--white);margin-bottom:4px}
+.project-info .desc{font-size:.78rem;color:var(--text-dim);line-height:1.5;margin-bottom:12px}
+.project-tags{display:flex;gap:6px;flex-wrap:wrap}
+.project-tag{padding:4px 10px;border-radius:100px;background:rgba(198,169,98,.1);color:var(--gold);font-size:.58rem;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.project-links{display:flex;gap:8px;margin-top:12px}
+.project-links a{color:var(--text-dim);font-size:.72rem;text-decoration:none;transition:color .2s;display:flex;align-items:center;gap:4px}
+.project-links a:hover{color:var(--gold)}
+
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.contact-form{display:flex;flex-direction:column;gap:14px}
+.contact-form input,.contact-form textarea{padding:14px 18px;border-radius:100px;background:var(--glass);border:1px solid var(--glass-border);color:var(--white);font-family:'DM Sans',sans-serif;font-size:.88rem}
+.contact-form textarea{border-radius:var(--r-sm);min-height:120px;resize:vertical}
+.contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--gold)}
+.contact-form button{padding:14px 32px;border-radius:100px;background:var(--gold);color:#0A0A09;border:none;font-weight:700;font-size:.8rem;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:.35s}
+.contact-form button:hover{background:var(--cream)}
+.contact-info p{color:var(--text-dim);font-size:.88rem;line-height:1.8;margin-bottom:20px}
+.contact-info a{color:var(--gold);text-decoration:none}
+
+.footer{padding:60px 40px 24px;background:var(--surface);border-top:1px solid var(--glass-border)}
+.footer-inner{max-width:var(--max);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer p{font-size:.7rem;color:var(--text-muted);letter-spacing:1px}
+.footer-links{display:flex;gap:20px}
+.footer-links a{color:var(--text-muted);text-decoration:none;font-size:.7rem;transition:color .2s}
+.footer-links a:hover{color:var(--gold)}
+
+@media(max-width:768px){
+  .nav-links{display:none}.menu-toggle{display:flex}
+  .hero-inner{grid-template-columns:1fr;text-align:center}
+  .hero-text p{margin-left:auto;margin-right:auto}
+  .hero-cta{justify-content:center}
+  .skills-grid{grid-template-columns:1fr 1fr}
+  .projects-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .section{padding:56px 20px}
+}
+@media(max-width:480px){.skills-grid{grid-template-columns:1fr}}
+.nav.open .nav-links{display:flex;flex-direction:column;position:absolute;top:60px;left:0;right:0;background:rgba(10,10,9,.98);padding:24px;gap:16px;border-bottom:1px solid var(--glass-border)}
+</style>
 </head>
-
 <body>
-  <!-- Barra de navegacion -->
-  <nav class="navbar navbar-expand-md navbar-light">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler"
-        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbar-toggler">
-        <a class="navbar-brand" href="#">
-          <img src="imagenes/icono.png" width="50" alt="Logo de la pagina web">
-        </a>
-        <ul class="navbar-nav d-flex justify-content-center align-items-center">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#sobre-mi">Sobre mi</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#proyectos">Proyectos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#testimonios">Testimonios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contacto">Contacto</a>
-          </li>
-        </ul>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">FRANK<span>.</span>ABANTO</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h2>📍 Cajamarca, Perú</h2>
+      <h1>Construyo<br>la web <em>que imaginas.</em></h1>
+      <p>Desarrollador Frontend especializado en crear experiencias web premium. Desde portfolios hasta e-commerce — cada proyecto es una obra de precisión.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">Ver Proyectos →</a>
+        <a href="#contact" class="btn-ghost">Contactarme</a>
       </div>
     </div>
-  </nav>
-
-  <!-- Seccion Hero -->
-
-  <section class="hero align-items-stretch">
-    <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
-      <img class="hero-imagen-desarrollador rounded-circle"
-        src="imagenes/imagenes-desarrolladores/desarrollador-ejemplo.svg" alt="Foto de Frank Abanto">
-      <h1>Hola, soy Frank Abanto</h1>
-      <h2>Desarrollo sitios web y escribo articulos sobre programacion.</h2>
+    <div class="hero-visual">
+      <div class="hero-avatar">FA</div>
+      <div class="hero-tech">
+        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>GitHub</span>
+      </div>
     </div>
-    <div class="hero-inferior">
-      <img class="hero-inferior-imagen img-fluid" src="imagenes/hero-inferior.svg" alt="Monitor, laptop">
+  </div>
+</section>
+
+<section class="section" id="skills" style="background:var(--surface)">
+  <div class="section-inner">
+    <div class="s-label">Skills</div>
+    <h2 class="s-title">Lo que domino.</h2>
+    <p class="s-desc">Tecnologías y herramientas con las que construyo soluciones web completas, desde el diseño hasta el despliegue.</p>
+    <div class="skills-grid">
+      <div class="skill-card"><div class="skill-icon">🎨</div><h3>HTML & CSS</h3><p>Maquetación semántica, responsive design, animaciones CSS, glassmorphism</p></div>
+      <div class="skill-card"><div class="skill-icon">⚡</div><h3>JavaScript</h3><p>ES6+, DOM manipulation, async/await, APIs REST, lógica de aplicación</p></div>
+      <div class="skill-card"><div class="skill-icon">⚛️</div><h3>React</h3><p>Componentes funcionales, hooks, Vite, estado y renderizado eficiente</p></div>
+      <div class="skill-card"><div class="skill-icon">🚀</div><h3>Git & GitHub</h3><p>Control de versiones, GitHub Pages, CI/CD, colaboración open source</p></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Sobre mi -->
-  <section id="sobre-mi" class="sobre-mi seccion-oscura">
-    <div class="contenedor">
-      <h2 class="seccion-titulo">Conoce a Frank Abanto</h2>
-      <p class="seccion-texto">
-        Soy ingeniero de software, especializado en desarrollo frontend, y también creador de contenidos sobre
-        tecnología,
-        programación e inteligencia artificial. <br> Creo que para un desarrollador el único límite es la imaginación. Y
-        me
-        encanta la comunidad que se ha generado de todos
-        para uno y uno para todos. Nunca dejes de aprender y sigue aprendiendo más.
-      </p>
-    </div>
-  </section>
-
-  <!-- Experiencia -->
-
-  <section class="experiencia seccion-clara">
-    <div class="container text-center">
-      <div class="row">
-        <!-- Desarrollo  Web -->
-        <div class="columna col-12 col-md-4">
-          <i class="bi bi-laptop"></i>
-          <p class="experiencia-titulo">Desarrollo Web</p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae est ratione repudiandae aliquid omnis
-            similique totam mollitia aperiam consequatur, nulla, cumque delectus soluta! Voluptates possimus sunt cumque
-            perspiciatis ab doloribus?
-          </p>
-          <div class="badges-contenedor">
-            <span class="badge text-bg-primary">HTML</span>
-            <span class="badge text-bg-primary">CSS</span>
-            <span class="badge text-bg-primary">JavaScript</span>
-            <span class="badge text-bg-primary">React</span>
-          </div>
+<section class="section" id="projects">
+  <div class="section-inner">
+    <div class="s-label">Proyectos</div>
+    <h2 class="s-title">Trabajo reciente.</h2>
+    <p class="s-desc">Proyectos reales construidos con atención al detalle. Cada uno refleja un estándar de calidad profesional.</p>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-img">🦷</div>
+        <div class="project-info">
+          <h3>Áurea Dental</h3>
+          <p class="desc">Sitio web premium para clínica odontológica. Diseño elegante, responsive, valorado en $5,000.</p>
+          <div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">Design</span></div>
+          <div class="project-links"><a href="https://github.com/FrankUsqAbant/aurea-dental" target="_blank">🔗 GitHub</a><a href="https://frankusqabant.github.io/aurea-dental/" target="_blank">🌐 Live</a></div>
         </div>
-        <!-- Articulos  -->
-        <div class="columna col-12 col-md-4">
-          <i class="bi bi-laptop"></i>
-          <p class="experiencia-titulo">Articulos</p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae est ratione repudiandae aliquid omnis
-            similique totam mollitia aperiam consequatur, nulla, cumque delectus soluta! Voluptates possimus sunt cumque
-            perspiciatis ab doloribus?
-          </p>
-          <div class="badges-contenedor">
-            <span class="badge text-bg-primary">Escribir</span>
-            <span class="badge text-bg-primary">Editar</span>
-            <span class="badge text-bg-primary">Blogs</span>
-          </div>
+      </div>
+      <div class="project-card">
+        <div class="project-img">🦙</div>
+        <div class="project-info">
+          <h3>JALCA Moda</h3>
+          <p class="desc">E-commerce de moda masculina desde Cajamarca. Glassmorphism, bento grid, $10,000.</p>
+          <div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JS</span></div>
+          <div class="project-links"><a href="https://github.com/FrankUsqAbant/vertice-moda" target="_blank">🔗 GitHub</a><a href="https://frankusqabant.github.io/vertice-moda/" target="_blank">🌐 Live</a></div>
         </div>
-        <!-- Estudiante -->
-        <div class="columna col-12 col-md-4">
-          <i class="bi bi-laptop"></i>
-          <p class="experiencia-titulo">Estudiante</p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae est ratione repudiandae aliquid omnis
-            similique totam mollitia aperiam consequatur, nulla, cumque delectus soluta! Voluptates possimus sunt cumque
-            perspiciatis ab doloribus?
-          </p>
-          <div class="badges-contenedor">
-            <span class="badge text-bg-primary">freeCodeCamp</span>
-            <span class="badge text-bg-primary">Desarrollo Web</span>
-            <span class="badge text-bg-primary">Python</span>
-          </div>
+      </div>
+      <div class="project-card">
+        <div class="project-img">📚</div>
+        <div class="project-info">
+          <h3>Proyecto Library</h3>
+          <p class="desc">Biblioteca digital de libros clásicos de dominio público. Interfaz limpia, navegación intuitiva.</p>
+          <div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JS</span></div>
+          <div class="project-links"><a href="https://github.com/FrankUsqAbant/Proyecto-Library" target="_blank">🔗 GitHub</a></div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Proyectos  -->
-
-  <section id="proyectos" class="proyectos-recientes seccion-clara d-flex flex-column">
-    <h2 class="seccion-titulo texto-negro">Mis proyectos recientes</h2>
-    <h3 class="seccion-descripcion">Estos son algunos proyectos que he creado recientemente</h3>
-    <!-- Galeria de Proyectos  -->
-    <div class="container text-center proyectos-contenedor">
-      <div class="row">
-        <!-- Proyecto 1  -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="proyecto">
-            <img src="imagenes/proyecto1.png" alt="Proyecto 1">
-            <div class="overlay">
-              <p>Proyecto 1</p>
-              <div class="iconos-contenedor">
-                <a href="https://github.com/FrankUsqAbant/02-contador-de-clics" target="_blank"
-                  rel="noopener noreferrer">
-                  <i class="bi bi-github"></i>
-                </a>
-                <a href="https://github.com/FrankUsqAbant/02-contador-de-clics" target="_blank"
-                  rel="noopener noreferrer">
-                  <i class="bi bi-laptop"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Proyecto 2  -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="proyecto">
-            <img src="imagenes/proyecto2.png" alt="Proyecto 2">
-            <div class="overlay">
-              <p>Proyecto 2</p>
-              <div class="iconos-contenedor">
-                <a href="https://github.com/FrankUsqAbant/02-contador-de-clics" target="_blank"
-                  rel="noopener noreferrer">
-                  <i class="bi bi-github"></i>
-                </a>
-                <a href="https://github.com/FrankUsqAbant/02-contador-de-clics" target="_blank"
-                  rel="noopener noreferrer">
-                  <i class="bi bi-laptop"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Proyecto 3  -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="proyecto">
-            <img src="imagenes/proyecto3.png" alt="Proyecto 3">
-            <div class="overlay">
-              <p>Proyecto 3</p>
-              <div class="iconos-contenedor">
-                <a href="https://github.com/FrankUsqAbant/02-contador-de-clics" target="_blank"
-                  rel="noopener noreferrer">
-                  <i class="bi bi-github"></i>
-                </a>
-                <a href="https://github.com/FrankUsqAbant/02-contador-de-clics" target="_blank"
-                  rel="noopener noreferrer">
-                  <i class="bi bi-laptop"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Proyecto 4  -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="proyecto">
-            <img src="imagenes/proyecto4.png" alt="Proyecto 4">
-            <div class="overlay">
-              <p>Proyecto 4</p>
-              <div class="iconos-contenedor">
-                <a href="https://github.com/FrankUsqAbant/02-contador-de-clics" target="_blank"
-                  rel="noopener noreferrer">
-                  <i class="bi bi-github"></i>
-                </a>
-                <a href="https://github.com/FrankUsqAbant/02-contador-de-clics" target="_blank"
-                  rel="noopener noreferrer">
-                  <i class="bi bi-laptop"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Proyecto 5  -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="proyecto">
-            <img src="imagenes/proyecto5.png" alt="Proyecto 5">
-            <div class="overlay">
-              <p>Proyecto 5</p>
-              <div class="iconos-contenedor">
-                <a href="https://github.com/FrankUsqAbant/02-contador-de-clics" target="_blank"
-                  rel="noopener noreferrer">
-                  <i class="bi bi-github"></i>
-                </a>
-                <a href="https://github.com/FrankUsqAbant/02-contador-de-clics" target="_blank"
-                  rel="noopener noreferrer">
-                  <i class="bi bi-laptop"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Proyecto 6  -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="proyecto">
-            <img src="imagenes/proyecto6.png" alt="Proyecto 6">
-            <div class="overlay">
-              <p>Proyecto 6</p>
-              <div class="iconos-contenedor">
-                <a href="https://github.com/FrankUsqAbant/02-contador-de-clics" target="_blank"
-                  rel="noopener noreferrer">
-                  <i class="bi bi-github"></i>
-                </a>
-                <a href="https://github.com/FrankUsqAbant/02-contador-de-clics" target="_blank"
-                  rel="noopener noreferrer">
-                  <i class="bi bi-laptop"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+<section class="section" id="contact" style="background:var(--surface)">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div>
+        <div class="s-label">Contacto</div>
+        <h2 class="s-title">Hablemos.</h2>
+        <div class="contact-info" style="margin-top:24px">
+          <p>¿Tienes un proyecto en mente? Escríbeme. Estoy abierto a colaboraciones, trabajo freelance y oportunidades de desarrollo web.</p>
+          <p>📍 Cajamarca, Perú</p>
+          <p>📧 <a href="mailto:usquizafranquer@gmail.com">usquizafranquer@gmail.com</a></p>
+          <p>🐙 <a href="https://github.com/FrankUsqAbant" target="_blank">github.com/FrankUsqAbant</a></p>
         </div>
       </div>
+      <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="Tu nombre" required>
+        <input type="email" placeholder="tu@email.com" required>
+        <textarea placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+        <button type="submit">Enviar Mensaje →</button>
+      </form>
     </div>
-    <a href="https://github.com/FrankUsqAbant" target="_blank" rel="noopener noreferrer">
-      <button type="button" class="btn btn-info">
-        Ver mas proyectos
-        <i class="bi bi-arrow-right-circle-fill"></i>
-      </button>
-    </a>
-  </section>
+  </div>
+</section>
 
-  <!-- Articulos  -->
-
-  <section class="articulos justify-content-start">
-    <h2 class="seccion-titulo texto-negro">Articulos</h2>
-    <div class="card">
-      <div class="card-header">
-        Mas recientes
-      </div>
-      <ul class="list-group list-group-flush">
-        <a href="https://github.com/FrankUsqAbant" target="_blank" rel="noopener noreferrer">
-          <li class="list-group-item">Lista de Proyectos, publicados en github </li>
-        </a>
-        <a href="https://github.com/FrankUsqAbant" target="_blank" rel="noopener noreferrer">
-          <li class="list-group-item">Lista de Repositorios, publicados en github para que lo veas</li>
-        </a>
-        <a href="https://github.com/FrankUsqAbant" target="_blank" rel="noopener noreferrer">
-          <li class="list-group-item">Lista de Proyectos, publicados en github para que los veas si quieres </li>
-        </a>
-        <a href="https://github.com/FrankUsqAbant" target="_blank" rel="noopener noreferrer">
-          <li class="list-group-item">Lista de Proyectos, publicados en github </li>
-        </a>
-        <a href="https://github.com/FrankUsqAbant" target="_blank" rel="noopener noreferrer">
-          <li class="list-group-item">Lista de Proyectos, publicados en github </li>
-        </a>
-        <a href="https://github.com/FrankUsqAbant" target="_blank" rel="noopener noreferrer">
-          <li class="list-group-item">Lista de Proyectos, publicados en github </li>
-        </a>
-      </ul>
+<footer class="footer">
+  <div class="footer-inner">
+    <p>© 2026 Frank Abanto. Cajamarca, Perú.</p>
+    <div class="footer-links">
+      <a href="https://github.com/FrankUsqAbant" target="_blank">GitHub</a>
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
     </div>
+  </div>
+</footer>
 
-    <button type="button" class="btn btn-info">Ver mas articulos</button>
-
-  </section>
-
-  <!-- Testimonios  -->
-
-  <section id="testimonios" class="testimonios seccion-clara">
-    <h2 class="seccion-titulo">Testimonios</h2>
-    <h3 class="seccion-descripcion">Estos son algunos testimonios de mis clientes</h3>
-    <!-- Carrusel  -->
-    <div id="testimonios-carrusel" class="carousel carousel-dark slide" bata-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="container">
-            <img class="testimonio-imagen rounded-circle" src="imagenes/cliente1.svg" alt="Cliente Gino">
-            <p class="testimonio-texto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur hic
-              corrupti error dignissimos nostrum iste alias sequi dolore autem.</p>
-            <div class="testimonio-info">
-              <p class="cliente">Gino</p>
-              <p class="cargo">Gerente de proyectos en Desarrollo Web</p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container">
-            <img class="testimonio-imagen rounded-circle" src="imagenes/cliente2.svg" alt="Cliente Nora">
-            <p class="testimonio-texto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur hic
-              corrupti error dignissimos nostrum iste alias sequi dolore autem.</p>
-            <div class="testimonio-info">
-              <p class="cliente">Nora</p>
-              <p class="cargo">Gerente de Disenios en Mi Pagina Web</p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container">
-            <img class="testimonio-imagen rounded-circle" src="imagenes/cliente3.svg" alt="Cliente Leonardo">
-            <p class="testimonio-texto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur hic
-              corrupti error dignissimos nostrum iste alias sequi dolore autem.</p>
-            <div class="testimonio-info">
-              <p class="cliente">Leonardo</p>
-              <p class="cargo">Gerente de proyectos en Apps</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Anterior</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Siguiente</span>
-      </button>
-    </div>
-  </section>
-
-  <!-- Contacto  -->
-
-  <section id="contacto" class="contacto seccion-oscura">
-    <div class="container">
-      <div class="container text-center rectangulo d-flex justify-content-evenly">
-        <div class="row">
-          <div class="col-12 col-md-4 seccion-titulo">
-            Hablemos
-          </div>
-          <div class="col-12 col-md-4 descripcion">
-            Contactame para iniciar tu proyecto de desarrollo web y hare que tu vision se vuelva realidad
-          </div>
-          <div class="col-12 col-md-4">
-            <a href="usquizafranquer@gmail.com">
-              <button type="button">
-                Contacto
-                <i class="bi bi-envelope-check-fill"></i>
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pie de pagina (footer)  -->
-
-  <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
-    <img class="footer-logo" src="imagenes/icono-blanco.svg" alt="Logo del portafolio">
-    <p class="footer-texto text-center">
-      Aprendo y creo todos los dias<br>Creemos un proyecto juntos.
-    </p>
-    <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
-      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-twitter"></i>
-      </a>
-      <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-youtube"></i>
-      </a>
-      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-instagram"></i>
-      </a>
-      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-linkedin"></i>
-      </a>
-      <a href=" mailto:janedoe@micorreo.com" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-envelope"></i>
-      </a>
-    </div>
-    <div class=" derechos-de-autor">Creado por Frank Abanto (2025) &#169;
-    </div>
-    </div>
-  </footer>
-
-
-  <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
-
+<script>
+const n=document.getElementById('nav'),mt=document.getElementById('menuToggle'),nl=document.getElementById('navLinks');
+mt.addEventListener('click',()=>n.classList.toggle('open'));
+nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>n.classList.remove('open')));
+document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();const b=e.target.querySelector('button');b.textContent='✓ Mensaje Enviado';b.style.background='#2A8C5A';setTimeout(()=>{b.textContent='Enviar Mensaje →';b.style.background=''},3000)});
+</script>
 </body>
-
 </html>
