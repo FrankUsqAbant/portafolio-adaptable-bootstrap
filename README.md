@@ -1,59 +1,71 @@
 <div align="center">
   <br>
-  <img src="https://readme-typing-svg.demolab.com?font=Syne&weight=700&size=38&duration=2000&pause=1000&color=C6A962&center=true&vCenter=true&width=600&lines=Frank+Abanto;Desarrollador+Frontend" alt="Frank Abanto" />
+  <img src="https://readme-typing-svg.demolab.com?font=Syne&weight=700&size=36&duration=2000&pause=1000&color=C6A962&center=true&vCenter=true&width=600&lines=Frank+Abanto;Desarrollador+Frontend;Portafolio+Web" alt="Frank Abanto" />
   <p><em>Construyo la web que imaginas.</em></p>
   <br>
 
-  <img src="https://img.shields.io/badge/Stack-HTML%2FCSS%2FJS-C6A962?style=for-the-badge&logo=html5&logoColor=white" />
-  <img src="https://img.shields.io/badge/Framework-React-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
-  <img src="https://img.shields.io/badge/Origen-Cajamarca%2C%20Per%C3%BA-C6A962?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Stack-HTML5%2FCSS3%2FJS-C6A962?style=for-the-badge&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/WebP-Optimized-orange?style=for-the-badge" />
+  <a href="https://frankusqabant.github.io/portafolio-adaptable-bootstrap/">
+    <img src="https://img.shields.io/badge/Deploy-GitHub%20Pages-2A8C5A?style=for-the-badge&logo=github&logoColor=white" alt="Ver Demo" />
+  </a>
   <br><br>
 </div>
 
 ---
 
-## 👨‍💻 Sobre mí
+## 👨‍💻 Sobre el Proyecto
 
-Desarrollador Frontend desde Cajamarca, Perú. Especializado en crear experiencias web premium con HTML, CSS, JavaScript y React. Cada proyecto es una oportunidad de construir algo que combine diseño, funcionalidad y rendimiento.
+Portafolio web profesional de **Frank Abanto** (Cajamarca, Perú). Desarrollado con arquitectura moderna, enfoque mobile-first, diseño oscuro elegante con glassmorphism, optimización total de imágenes a formato `.webp` y estrictas normas de seguridad web.
 
-### 🎨 Diseño del Portfolio
+### 🚀 Demo en Vivo
 
-| Elemento | Elección |
-|----------|----------|
-| **Tipografía** | Syne (headings) + DM Sans (body) |
-| **Paleta** | Dark `#0A0A09` · Dorado `#C6A962` · Crema `#F0E8DD` |
-| **Estilo** | Moderno, minimalista, glassmorphism |
-| **Responsive** | Mobile-first, menú hamburguesa |
+👉 **[frankusqabant.github.io/portafolio-adaptable-bootstrap](https://frankusqabant.github.io/portafolio-adaptable-bootstrap/)**
 
-### 🚀 Proyectos Destacados
+---
 
-| Proyecto | Descripción | Demo |
-|----------|-------------|------|
-| 🦷 **Áurea Dental** | Clínica odontológica premium ($5K) | [Live](https://frankusqabant.github.io/aurea-dental/) |
-| 🦙 **JALCA Moda** | E-commerce moda masculina ($10K) | [Live](https://frankusqabant.github.io/vertice-moda/) |
-| 📚 **Proyecto Library** | Biblioteca digital de clásicos | [Repo](https://github.com/FrankUsqAbant/Proyecto-Library) |
+<details>
+<summary><b>✨ Características &amp; Optimizaciones</b></summary>
 
-### 🛠️ Stack Técnico
+- **Diseño Glassmorphism Premium:** Paleta oscura con acentos dorados (`#C6A962`), tipografía `Syne` + `DM Sans` y efectos de desenfoque de fondo.
+- **Rendimiento Máximo (WebP):** Imágenes optimizadas con reducción del 94%+ en peso, `loading="lazy"` y `decoding="async"`.
+- **Seguridad Web Rigurosa:** Prevención de *Reverse Tabnabbing* (`rel="noopener noreferrer"`), metadatos de referencia segura y sanitización de formularios contra XSS.
+- **Interactividad &amp; ScrollSpy:** Navegación dinámica que resalta la sección activa al hacer scroll y menú adaptable para dispositivos móviles.
 
-- **HTML5** — Maquetación semántica, accesibilidad
-- **CSS3** — Animaciones, glassmorphism, responsive design
-- **JavaScript** — ES6+, DOM, APIs REST
-- **React** — Componentes, hooks, Vite
-- **Git & GitHub** — Control de versiones, Pages, CI/CD
+</details>
 
-### 📂 Estructura
+<details>
+<summary><b>🛠️ Proyectos Destacados Incluidos</b></summary>
 
-```
+| Proyecto | Tecnologías | Enlace |
+|---|---|---|
+| **Áurea Dental** | HTML5, CSS3, Responsive | [Demo](https://frankusqabant.github.io/aurea-dental/) |
+| **JALCA Moda** | HTML5, CSS3, JS, Bento Grid | [Demo](https://frankusqabant.github.io/vertice-moda/) |
+| **Proyecto Library** | JavaScript, DOM, CSS Grid | [Repo](https://github.com/FrankUsqAbant/Proyecto-Library) |
+| **Testimonios React** | React 18, Vite, WebP | [Demo](https://frankusqabant.github.io/01-testimonios/) |
+| **Contador de Clics** | React, useState, LocalStorage | [Demo](https://frankusqabant.github.io/02-contador-de-clics/) |
+
+</details>
+
+<details>
+<summary><b>📂 Estructura del Repositorio</b></summary>
+
+```text
 portafolio-adaptable-bootstrap/
-├── index.html          # Portfolio completo
-├── README.md           # Este documento
-└── imagenes/           # Assets del proyecto
+├── .github/workflows/deploy.yml   # Despliegue automático en GitHub Pages
+├── css/
+│   └── style.css                  # Estilos modernos y responsive
+├── js/
+│   └── main.js                    # Interactividad, menú y scrollspy
+├── imagenes/                      # Imágenes de proyectos optimizadas (.webp)
+├── index.html                     # Estructura semántica principal
+└── README.md                      # Documentación del proyecto
 ```
+
+</details>
 
 ---
 
 <div align="center">
-  <sub>© 2026 Frank Abanto · Cajamarca, Perú</sub>
-  <br><br>
-  <img src="https://img.shields.io/badge/Licencia-MIT-C6A962?style=flat-square" />
+  <sub>© 2026 Frank Abanto · Cajamarca, Perú · Código limpio y seguro</sub>
 </div>
