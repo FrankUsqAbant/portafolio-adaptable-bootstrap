@@ -41,8 +41,8 @@
       <nav aria-label="Navegación principal">
         <ul class="nav-menu" id="navMenu">
           <li><a href="#inicio" class="nav-link active">Inicio</a></li>
-          <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
           <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+          <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
           <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
           <li><a href="#contacto" class="nav-link">Contacto</a></li>
         </ul>
@@ -72,7 +72,7 @@
               Construyo la web<br><em>que imaginas.</em>
             </h1>
             <p class="hero-desc">
-              Desarrollador Frontend especializado en crear experiencias web modernas, código estructurado, alto rendimiento y diseño responsivo de precisión.
+              Desarrollador Frontend apasionado por transformar ideas en aplicaciones web intuitivas, rápidas y estéticamente impecables utilizando HTML5, CSS3, JavaScript ES6+ y React.
             </p>
             <div class="hero-actions">
               <a href="#proyectos" class="btn btn-primary">Ver Proyectos →</a>
@@ -80,18 +80,31 @@
             </div>
           </div>
 
+          <!-- Terminal Widget (En reemplazo de la foto) -->
           <div class="hero-visual">
-            <div class="hero-card-visual">
-              <div class="hero-avatar" aria-hidden="true">FA</div>
-              <h2 class="hero-avatar-title">Frank Abanto</h2>
-              <p class="hero-avatar-sub">Frontend Developer</p>
-              <div class="hero-badges-list">
-                <span class="hero-badge-pill">HTML5 Semántico</span>
-                <span class="hero-badge-pill">CSS3 &amp; Grid</span>
-                <span class="hero-badge-pill">JavaScript ES6+</span>
-                <span class="hero-badge-pill">React &amp; Vite</span>
-                <span class="hero-badge-pill">WebP Optimized</span>
-                <span class="hero-badge-pill">Git &amp; GitHub</span>
+            <div class="terminal-card" aria-label="Información del desarrollador">
+              <div class="terminal-header">
+                <span class="terminal-dot dot-red"></span>
+                <span class="terminal-dot dot-yellow"></span>
+                <span class="terminal-dot dot-green"></span>
+                <span class="terminal-title">developer.config.js</span>
+              </div>
+              <div class="terminal-body">
+                <div class="terminal-line"><span class="terminal-comment">// Perfil Profesional</span></div>
+                <div class="terminal-line"><span class="terminal-prompt">const</span> developer = {</div>
+                <div class="terminal-line">&nbsp;&nbsp;<span class="terminal-key">nombre:</span> <span class="terminal-val">"Frank Abanto"</span>,</div>
+                <div class="terminal-line">&nbsp;&nbsp;<span class="terminal-key">rol:</span> <span class="terminal-val">"Frontend Developer"</span>,</div>
+                <div class="terminal-line">&nbsp;&nbsp;<span class="terminal-key">ubicacion:</span> <span class="terminal-val">"Cajamarca, Perú 🇵🇪"</span>,</div>
+                <div class="terminal-line">&nbsp;&nbsp;<span class="terminal-key">especialidad:</span> <span class="terminal-val">"UI/UX · React · Performance"</span>,</div>
+                <div class="terminal-line">&nbsp;&nbsp;<span class="terminal-key">disponibilidad:</span> <span class="terminal-val">true</span></div>
+                <div class="terminal-line">};</div>
+
+                <div class="terminal-badges">
+                  <span class="term-badge">⚡ React 18</span>
+                  <span class="term-badge">💎 Clean Code</span>
+                  <span class="term-badge">🚀 WebP / Speed</span>
+                  <span class="term-badge">🛡️ Secure By Design</span>
+                </div>
               </div>
             </div>
           </div>
@@ -100,25 +113,207 @@
     </section>
 
     <!-- Stats Ribbon -->
-    <section class="stats-ribbon" aria-label="Estadísticas de trabajo">
+    <section class="stats-ribbon" aria-label="Métricas profesionales">
       <div class="container">
         <div class="stats-grid">
           <div class="stat-item">
-            <h3>+5<span>+</span></h3>
-            <p>Proyectos Desarrollados</p>
+            <h3>+50<span>+</span></h3>
+            <p>Repositorios &amp; Prácticas</p>
           </div>
           <div class="stat-item">
             <h3>100<span>%</span></h3>
             <p>Responsive &amp; Mobile-First</p>
           </div>
           <div class="stat-item">
-            <h3>65<span>%+</span></h3>
-            <p>Optimización WebP</p>
+            <h3>95<span>%+</span></h3>
+            <p>Reducción en Peso WebP</p>
           </div>
           <div class="stat-item">
             <h3>A11y</h3>
-            <p>Accesibilidad &amp; Buenas Prácticas</p>
+            <p>Estándar de Accesibilidad</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="proyectos">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-tag">Portafolio</div>
+          <h2 class="section-title">Proyectos Seleccionados</h2>
+          <p class="section-desc">
+            Explora mis proyectos más representativos, desde plataformas e-commerce y sitios corporativos hasta aplicaciones interactivas en React.
+          </p>
+        </header>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs" role="tablist" aria-label="Filtrar proyectos por categoría">
+          <button class="filter-btn active" data-filter="all" role="tab">Todos</button>
+          <button class="filter-btn" data-filter="react" role="tab">React &amp; Vite</button>
+          <button class="filter-btn" data-filter="landing" role="tab">Landing Pages</button>
+          <button class="filter-btn" data-filter="apps" role="tab">Web Apps</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Proyecto 1: Áurea Dental -->
+          <article class="project-card" data-category="landing">
+            <div class="project-media">
+              <img src="imagenes/proyecto1.webp" alt="Sitio Web Áurea Dental" class="project-img" loading="lazy" decoding="async" width="600" height="375">
+              <span class="project-badge-overlay">Landing Page</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Áurea Dental</h3>
+              <p class="project-desc">
+                Sitio web corporativo y de reservas para clínica odontológica premium. Diseño sofisticado, totalmente responsive y optimizado para conversión.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML5</span>
+                <span class="project-tag">CSS3</span>
+                <span class="project-tag">Responsive</span>
+              </div>
+              <div class="project-links">
+                <a href="https://frankusqabant.github.io/aurea-dental/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
+                  Ver Demo ↗
+                </a>
+                <a href="https://github.com/FrankUsqAbant/aurea-dental" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
+                  Código ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 2: JALCA Moda -->
+          <article class="project-card" data-category="landing">
+            <div class="project-media">
+              <img src="imagenes/proyecto2.webp" alt="E-Commerce JALCA Moda" class="project-img" loading="lazy" decoding="async" width="600" height="375">
+              <span class="project-badge-overlay">E-Commerce</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">JALCA Moda (Vértice)</h3>
+              <p class="project-desc">
+                E-commerce contemporáneo de moda masculina. Tema oscuro con acentos cobre, catálogo interactivo con Bento Grid y arquitectura sin dependencias.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML5</span>
+                <span class="project-tag">CSS3</span>
+                <span class="project-tag">Bento Grid</span>
+              </div>
+              <div class="project-links">
+                <a href="https://frankusqabant.github.io/vertice-moda/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
+                  Ver Demo ↗
+                </a>
+                <a href="https://github.com/FrankUsqAbant/vertice-moda" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
+                  Código ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 3: 01-Testimonios React -->
+          <article class="project-card" data-category="react">
+            <div class="project-media">
+              <img src="imagenes/proyecto4.webp" alt="Testimonios React" class="project-img" loading="lazy" decoding="async" width="600" height="375">
+              <span class="project-badge-overlay">React 18</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Testimonios React</h3>
+              <p class="project-desc">
+                Componente de testimonios moderno en React con Vite, imágenes WebP ultraligeras, accesibilidad completa y renderizado dinámico con `map`.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">Vite</span>
+                <span class="project-tag">WebP</span>
+              </div>
+              <div class="project-links">
+                <a href="https://frankusqabant.github.io/01-testimonios/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
+                  Ver Demo ↗
+                </a>
+                <a href="https://github.com/FrankUsqAbant/01-testimonios" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
+                  Código ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 4: 02-Contador de Clics -->
+          <article class="project-card" data-category="react apps">
+            <div class="project-media">
+              <img src="imagenes/proyecto5.webp" alt="Contador de Clics React" class="project-img" loading="lazy" decoding="async" width="600" height="375">
+              <span class="project-badge-overlay">React 18</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Contador de Clics</h3>
+              <p class="project-desc">
+                Aplicación reactiva con gestión de estado (`useState`), atajos de teclado interactivos, animación de pulsación y persistencia en `localStorage`.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">LocalStorage</span>
+                <span class="project-tag">Hooks</span>
+              </div>
+              <div class="project-links">
+                <a href="https://frankusqabant.github.io/02-contador-de-clics/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
+                  Ver Demo ↗
+                </a>
+                <a href="https://github.com/FrankUsqAbant/02-contador-de-clics" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
+                  Código ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 5: Proyecto Library -->
+          <article class="project-card" data-category="apps">
+            <div class="project-media">
+              <img src="imagenes/proyecto3.webp" alt="Proyecto Library" class="project-img" loading="lazy" decoding="async" width="600" height="375">
+              <span class="project-badge-overlay">Web App</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Proyecto Library</h3>
+              <p class="project-desc">
+                Biblioteca digital interactiva para explorar y catalogar libros clásicos de dominio público con navegación intuitiva y diseño responsivo.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">DOM</span>
+                <span class="project-tag">CSS Grid</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/FrankUsqAbant/Proyecto-Library" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
+                  Ver Repositorio ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 6: Tarjeta Digital Interactiva -->
+          <article class="project-card" data-category="apps">
+            <div class="project-media">
+              <img src="imagenes/proyecto6.webp" alt="Tarjeta Digital Interactiva" class="project-img" loading="lazy" decoding="async" width="600" height="375">
+              <span class="project-badge-overlay">Web App</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Tarjeta Digital Interactiva</h3>
+              <p class="project-desc">
+                Landing interactiva de presentación con enlaces a redes sociales, formulario dinámico y mascota animada con micro-interacciones.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">Animaciones</span>
+                <span class="project-tag">CSS</span>
+              </div>
+              <div class="project-links">
+                <a href="https://frankusqabant.github.io/FrankUsqAbant.github.io/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
+                  Ver Demo ↗
+                </a>
+                <a href="https://github.com/FrankUsqAbant/FrankUsqAbant.github.io" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
+                  Código ↗
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -150,7 +345,7 @@
           <article class="skill-card">
             <span class="skill-icon">⚛️</span>
             <h3>React &amp; Vite</h3>
-            <p>Componentes funcionales, gestión de estado con Hooks (`useState`, `useEffect`), bundler ultrarrápido y desarrollo por componentes.</p>
+            <p>Componentes funcionales, gestión de estado con Hooks (`useState`, `useEffect`), bundler ultrarrápido y desarrollo escalable.</p>
           </article>
 
           <article class="skill-card">
@@ -162,182 +357,8 @@
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="section" id="proyectos">
-      <div class="container">
-        <header class="section-header">
-          <div class="section-tag">Portafolio</div>
-          <h2 class="section-title">Proyectos Destacados</h2>
-          <p class="section-desc">
-            Selección de trabajos desarrollados con atención al detalle, código limpio, alto rendimiento y diseño moderno.
-          </p>
-        </header>
-
-        <div class="projects-grid">
-          <!-- Proyecto 1: Áurea Dental -->
-          <article class="project-card">
-            <div class="project-media">
-              <img src="imagenes/proyecto1.webp" alt="Sitio Web Áurea Dental" class="project-img" loading="lazy" decoding="async" width="600" height="375">
-              <span class="project-badge-overlay">Destacado</span>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Áurea Dental</h3>
-              <p class="project-desc">
-                Sitio web corporativo y de reservas para clínica odontológica premium. Diseño sofisticado, totalmente responsive y enfocado en conversión.
-              </p>
-              <div class="project-tags">
-                <span class="project-tag">HTML5</span>
-                <span class="project-tag">CSS3</span>
-                <span class="project-tag">Responsive</span>
-              </div>
-              <div class="project-links">
-                <a href="https://frankusqabant.github.io/aurea-dental/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
-                  Ver Demo ↗
-                </a>
-                <a href="https://github.com/FrankUsqAbant/aurea-dental" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
-                  Código ↗
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Proyecto 2: JALCA Moda -->
-          <article class="project-card">
-            <div class="project-media">
-              <img src="imagenes/proyecto2.webp" alt="E-Commerce JALCA Moda" class="project-img" loading="lazy" decoding="async" width="600" height="375">
-              <span class="project-badge-overlay">E-Commerce</span>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">JALCA Moda</h3>
-              <p class="project-desc">
-                Plataforma de moda masculina contemporánea. Interfaz con glassmorphism, catálogo interactivo y estructura optimizada para móvil.
-              </p>
-              <div class="project-tags">
-                <span class="project-tag">HTML5</span>
-                <span class="project-tag">CSS3</span>
-                <span class="project-tag">JavaScript</span>
-              </div>
-              <div class="project-links">
-                <a href="https://frankusqabant.github.io/vertice-moda/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
-                  Ver Demo ↗
-                </a>
-                <a href="https://github.com/FrankUsqAbant/vertice-moda" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
-                  Código ↗
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Proyecto 3: Proyecto Library -->
-          <article class="project-card">
-            <div class="project-media">
-              <img src="imagenes/proyecto3.webp" alt="Proyecto Library" class="project-img" loading="lazy" decoding="async" width="600" height="375">
-              <span class="project-badge-overlay">Web App</span>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Proyecto Library</h3>
-              <p class="project-desc">
-                Biblioteca digital interactiva para explorar y gestionar libros clásicos de dominio público con navegación intuitiva y búsqueda dinámica.
-              </p>
-              <div class="project-tags">
-                <span class="project-tag">JavaScript</span>
-                <span class="project-tag">DOM</span>
-                <span class="project-tag">CSS Grid</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/FrankUsqAbant/Proyecto-Library" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
-                  Ver Repositorio ↗
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Proyecto 4: Testimonios React -->
-          <article class="project-card">
-            <div class="project-media">
-              <img src="imagenes/proyecto4.webp" alt="Testimonios React Component" class="project-img" loading="lazy" decoding="async" width="600" height="375">
-              <span class="project-badge-overlay">React</span>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Testimonios React</h3>
-              <p class="project-desc">
-                Componente de testimonios en React 18 con Vite, imágenes WebP ultraligeras, accesibilidad y renderizado declarativo con `map`.
-              </p>
-              <div class="project-tags">
-                <span class="project-tag">React</span>
-                <span class="project-tag">Vite</span>
-                <span class="project-tag">WebP</span>
-              </div>
-              <div class="project-links">
-                <a href="https://frankusqabant.github.io/01-testimonios/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
-                  Ver Demo ↗
-                </a>
-                <a href="https://github.com/FrankUsqAbant/01-testimonios" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
-                  Código ↗
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Proyecto 5: Contador de Clics -->
-          <article class="project-card">
-            <div class="project-media">
-              <img src="imagenes/proyecto5.webp" alt="Contador de Clics React" class="project-img" loading="lazy" decoding="async" width="600" height="375">
-              <span class="project-badge-overlay">React</span>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Contador de Clics</h3>
-              <p class="project-desc">
-                Aplicación interactiva con gestión de estado (`useState`), soporte de atajos de teclado, animaciones CSS y persistencia con `localStorage`.
-              </p>
-              <div class="project-tags">
-                <span class="project-tag">React</span>
-                <span class="project-tag">Vite</span>
-                <span class="project-tag">LocalStorage</span>
-              </div>
-              <div class="project-links">
-                <a href="https://frankusqabant.github.io/02-contador-de-clics/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
-                  Ver Demo ↗
-                </a>
-                <a href="https://github.com/FrankUsqAbant/02-contador-de-clics" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
-                  Código ↗
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Proyecto 6: Portafolio Responsive -->
-          <article class="project-card">
-            <div class="project-media">
-              <img src="imagenes/proyecto6.webp" alt="Portafolio Responsive" class="project-img" loading="lazy" decoding="async" width="600" height="375">
-              <span class="project-badge-overlay">Responsive</span>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Portafolio Adaptable</h3>
-              <p class="project-desc">
-                Sitio personal minimalista, seguro y veloz, construido con arquitectura vanilla, cero dependencias pesadas y CI/CD integrado.
-              </p>
-              <div class="project-tags">
-                <span class="project-tag">HTML5</span>
-                <span class="project-tag">CSS3</span>
-                <span class="project-tag">Security</span>
-              </div>
-              <div class="project-links">
-                <a href="https://frankusqabant.github.io/portafolio-adaptable-bootstrap/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
-                  Ver Demo ↗
-                </a>
-                <a href="https://github.com/FrankUsqAbant/portafolio-adaptable-bootstrap" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
-                  Código ↗
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <!-- Testimonials Section -->
-    <section class="section section-alt" id="testimonios">
+    <section class="section" id="testimonios">
       <div class="container">
         <header class="section-header">
           <div class="section-tag">Confianza</div>
@@ -394,15 +415,15 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="section" id="contacto">
+    <section class="section section-alt" id="contacto">
       <div class="container">
         <div class="contact-grid">
           <div class="contact-info-block">
             <header class="section-header" style="margin-bottom: 32px;">
-              <div class="section-tag">Contacto</div>
+              <div class="section-tag">Contacto Directo</div>
               <h2 class="section-title">Iniciemos un Proyecto Juntos</h2>
               <p class="section-desc">
-                ¿Tienes una idea o necesitas llevar la presencia web de tu marca al siguiente nivel? Escríbeme y diseñemos una solución a medida.
+                ¿Tienes una idea o necesitas llevar la presencia web de tu marca al siguiente nivel? Escríbeme directamente o contáctame a través de mis redes.
               </p>
             </header>
 
@@ -418,7 +439,12 @@
               <div class="contact-item-icon">📧</div>
               <div class="contact-item-text">
                 <h4>Correo Electrónico</h4>
-                <a href="mailto:usquizafranquer@gmail.com">usquizafranquer@gmail.com</a>
+                <p>
+                  <a href="mailto:usquizafranquer@gmail.com">usquizafranquer@gmail.com</a>
+                  <button type="button" class="copy-email-btn" id="copyEmailBtn" aria-label="Copiar correo al portapapeles">
+                    Copiar
+                  </button>
+                </p>
               </div>
             </div>
 
@@ -431,28 +457,39 @@
                 </a>
               </div>
             </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">𝕏</div>
+              <div class="contact-item-text">
+                <h4>Twitter / X</h4>
+                <a href="https://x.com/FrankUsqAbant" target="_blank" rel="noopener noreferrer">
+                  @FrankUsqAbant
+                </a>
+              </div>
+            </div>
           </div>
 
+          <!-- Formulario con servicio gratuito de envío FormSubmit.co -->
           <form class="contact-form" id="contactForm" novalidate>
             <div class="form-group">
               <label for="formName">Nombre</label>
-              <input type="text" id="formName" class="form-control" placeholder="Ej. Juan Pérez" required>
+              <input type="text" id="formName" name="name" class="form-control" placeholder="Ej. Juan Pérez" required>
             </div>
 
             <div class="form-group">
               <label for="formEmail">Correo Electrónico</label>
-              <input type="email" id="formEmail" class="form-control" placeholder="juan@ejemplo.com" required>
+              <input type="email" id="formEmail" name="email" class="form-control" placeholder="juan@ejemplo.com" required>
             </div>
 
             <div class="form-group">
               <label for="formMessage">Mensaje</label>
-              <textarea id="formMessage" class="form-control" placeholder="Cuéntame sobre tu proyecto o consulta..." required></textarea>
+              <textarea id="formMessage" name="message" class="form-control" placeholder="Cuéntame sobre tu proyecto o consulta..." required></textarea>
             </div>
 
             <div id="formFeedback" class="form-feedback" role="alert"></div>
 
             <button type="submit" class="btn btn-primary" style="width: 100%;">
-              Enviar Mensaje →
+              Enviar Mensaje Directo →
             </button>
           </form>
         </div>
@@ -464,12 +501,12 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <p>© <span id="currentYear">2026</span> Frank Abanto. Cajamarca, Perú · Código limpio y seguro.</p>
+        <p>© <span id="currentYear">2026</span> Frank Abanto. Cajamarca, Perú · Código limpio, seguro y optimizado.</p>
       </div>
 
       <div class="footer-links">
         <a href="https://github.com/FrankUsqAbant" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://x.com/FrankUsqAbant" target="_blank" rel="noopener noreferrer">Twitter/X</a>
         <a href="mailto:usquizafranquer@gmail.com">Email</a>
       </div>
     </div>
