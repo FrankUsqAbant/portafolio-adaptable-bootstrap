@@ -65,26 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 4. Copy Email to Clipboard
-  const copyEmailBtn = document.getElementById("copyEmailBtn");
-  if (copyEmailBtn) {
-    copyEmailBtn.addEventListener("click", () => {
-      const email = "usquizafranquer@gmail.com";
-      navigator.clipboard.writeText(email).then(() => {
-        const originalText = copyEmailBtn.textContent;
-        copyEmailBtn.textContent = "✓ ¡Copiado!";
-        copyEmailBtn.style.background = "#22c55e";
-        copyEmailBtn.style.color = "#0a0a09";
-        setTimeout(() => {
-          copyEmailBtn.textContent = originalText;
-          copyEmailBtn.style.background = "";
-          copyEmailBtn.style.color = "";
-        }, 2500);
-      });
-    });
-  }
-
-  // 5. Contact Form Submission via FormSubmit.co (Free email delivery)
+  // 4. Contact Form Submission via FormSubmit.co (Free email delivery)
   const contactForm = document.getElementById("contactForm");
   const formFeedback = document.getElementById("formFeedback");
 
@@ -162,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 6. Update Year in Footer
+  // 5. Update Year in Footer
   const yearElement = document.getElementById("currentYear");
   if (yearElement) {
     yearElement.textContent = new Date().getFullYear();

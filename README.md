@@ -16,7 +16,7 @@
 
 ## 👨‍💻 Sobre el Proyecto
 
-Portafolio web profesional de **Frank Abanto** (Cajamarca, Perú). Desarrollado con arquitectura moderna, enfoque mobile-first, diseño oscuro elegante con glassmorphism, optimización total de imágenes a formato `.webp` y estrictas normas de seguridad web.
+Portafolio web profesional de **Frank Abanto** (Cajamarca, Perú). Desarrollado con arquitectura moderna, enfoque mobile-first, diseño oscuro elegante con glassmorphism, optimización total de imágenes a formato `.webp`, formulario con envío directo de correos a inbox y estrictas normas de seguridad web.
 
 ### 🚀 Demo en Vivo
 
@@ -35,15 +35,14 @@ Portafolio web profesional de **Frank Abanto** (Cajamarca, Perú). Desarrollado 
 </details>
 
 <details>
-<summary><b>🛠️ Proyectos Destacados Incluidos</b></summary>
+<summary><b>🛠️ Proyectos Destacados</b></summary>
 
 | Proyecto | Tecnologías | Enlace |
 |---|---|---|
 | **Áurea Dental** | HTML5, CSS3, Responsive | [Demo](https://frankusqabant.github.io/aurea-dental/) |
-| **JALCA Moda** | HTML5, CSS3, JS, Bento Grid | [Demo](https://frankusqabant.github.io/vertice-moda/) |
-| **Proyecto Library** | JavaScript, DOM, CSS Grid | [Repo](https://github.com/FrankUsqAbant/Proyecto-Library) |
-| **Testimonios React** | React 18, Vite, WebP | [Demo](https://frankusqabant.github.io/01-testimonios/) |
-| **Contador de Clics** | React, useState, LocalStorage | [Demo](https://frankusqabant.github.io/02-contador-de-clics/) |
+| **JALCA Moda (Vértice)** | HTML5, CSS3, Bento Grid | [Demo](https://frankusqabant.github.io/vertice-moda/) |
+| **Proyecto Library** | TypeScript, DOM, CSS Grid | [Repo](https://github.com/FrankUsqAbant/Proyecto-Library) |
+| **Tarjeta Digital Interactiva** | JavaScript, Animaciones, CSS | [Demo](https://frankusqabant.github.io/FrankUsqAbant.github.io/) |
 
 </details>
 
@@ -56,7 +55,7 @@ portafolio-adaptable-bootstrap/
 ├── css/
 │   └── style.css                  # Estilos modernos y responsive
 ├── js/
-│   └── main.js                    # Interactividad, menú y scrollspy
+│   └── main.js                    # Interactividad, menú, filtros y FormSubmit
 ├── imagenes/                      # Imágenes de proyectos optimizadas (.webp)
 ├── index.html                     # Estructura semántica principal
 └── README.md                      # Documentación del proyecto
